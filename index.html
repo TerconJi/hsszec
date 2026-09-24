@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>黄石三中文娱俱乐部 · HSSZEC</title>
+<meta name="description" content="黄石三中文化和娱乐俱乐部（HSSZEC）：活动记录、在会名录、纳新信息。校园文娱，办过的事都记在这里。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2312233D'/%3E%3Cpath d='M16 6l2.9 6.2 6.8.8-5 4.7 1.3 6.7L16 21.6l-6 3.8 1.3-6.7-5-4.7 6.8-.8z' fill='%23C6952E'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@500;600;700;900&amp;family=Noto+Sans+SC:wght@300;400;500;700&amp;display=swap">
+<style>
+/* ============ 基础 ============ */
+:root{
+  --paper:#F7F6F1;
+  --ink:#1A1D24;
+  --navy:#12233D;
+  --navy-deep:#0C1A2E;
+  --gold:#C6952E;
+  --gold-soft:#E4C27A;
+  --muted:#6F7480;
+  --line:#DCD8CC;
+  --serif:"Noto Serif SC",serif;
+  --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-weight:400;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+::selection{background:var(--gold-soft);color:var(--navy-deep);}
+
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+
+/* ============ 导航 ============ */
+.site-head{
+  position:sticky;top:0;z-index:50;
+  background:rgba(247,246,241,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.site-head .wrap{
+  display:flex;align-items:center;justify-content:space-between;
+  height:64px;
+}
+.brand{display:flex;align-items:baseline;gap:12px;}
+.brand .mark{font-family:var(--serif);font-weight:900;font-size:20px;letter-spacing:.04em;}
+.brand .sub{font-size:12px;color:var(--muted);letter-spacing:.22em;}
+.nav{display:flex;gap:28px;font-size:14px;}
+.nav a{color:#3A3E47;padding:6px 0;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;}
+.nav a:hover{color:var(--navy);border-bottom-color:var(--gold);}
+.menu-btn{display:none;background:none;border:none;font-size:22px;color:var(--ink);cursor:pointer;line-height:1;font-family:var(--sans);}
+.mobile-nav{display:none;border-top:1px solid var(--line);background:var(--paper);}
+.mobile-nav a{display:block;padding:13px 24px;font-size:15px;border-bottom:1px solid var(--line);color:#3A3E47;}
+.mobile-nav a:last-child{border-bottom:none;}
+
+/* ============ Hero ============ */
+.hero{
+  position:relative;overflow:hidden;
+  background:var(--navy);
+  color:#F3EFE4;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background-image:url("https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/HEBMbLRX4oRqGDxxSMicXOnMnmc");
+  background-size:cover;background-position:center 38%;
+  opacity:.46;
+  filter:saturate(.85);
+}
+.hero-bg::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(12,26,46,.42) 0%,rgba(12,26,46,.55) 55%,var(--navy-deep) 100%);
+}
+.hero-inner{
+  position:relative;z-index:1;
+  display:flex;align-items:flex-end;justify-content:space-between;
+  min-height:min(78vh,720px);
+  padding:120px 24px 72px;
+  max-width:1120px;margin:0 auto;
+}
+.hero-copy{max-width:640px;}
+.hero-eyebrow{
+  font-size:13px;letter-spacing:.3em;color:var(--gold-soft);
+  margin-bottom:22px;display:flex;align-items:center;gap:14px;
+}
+.hero-eyebrow::before{content:"";width:34px;height:1px;background:var(--gold);}
+.hero-title{
+  font-family:var(--serif);font-weight:900;
+  font-size:clamp(34px,6vw,64px);
+  line-height:1.16;letter-spacing:.02em;
+  margin-bottom:20px;
+}
+.hero-title .accent{color:var(--gold-soft);}
+.hero-desc{
+  font-size:clamp(15px,1.6vw,17px);
+  color:#CFD4DE;font-weight:300;line-height:1.9;
+  margin-bottom:36px;max-width:34em;
+}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;}
+.btn{
+  display:inline-block;padding:13px 30px;font-size:15px;
+  border:1px solid var(--gold);color:var(--gold-soft);
+  letter-spacing:.08em;transition:background .18s,color .18s;
+}
+.btn.solid{background:var(--gold);color:var(--navy-deep);font-weight:500;}
+.btn:hover{background:var(--gold);color:var(--navy-deep);}
+.btn.solid:hover{background:var(--gold-soft);border-color:var(--gold-soft);}
+.hero-side{
+  writing-mode:vertical-rl;
+  font-family:var(--serif);font-weight:700;
+  font-size:15px;letter-spacing:.5em;color:rgba(243,239,228,.5);
+}
+.hero-tag{
+  position:absolute;z-index:1;bottom:0;left:50%;transform:translateX(-50%);
+  font-size:11px;letter-spacing:.35em;color:rgba(243,239,228,.38);
+  padding:0 12px 20px;white-space:nowrap;
+}
+@media(max-width:720px){
+  .nav{display:none;}
+  .menu-btn{display:block;}
+  .hero-side{display:none;}
+  .hero-inner{min-height:72vh;padding-top:84px;}
+}
+
+/* ============ 章节通用 ============ */
+section{scroll-margin-top:84px;}
+.block{padding:88px 0;}
+.block + .block{border-top:1px solid var(--line);}
+.sec-head{
+  display:flex;align-items:baseline;gap:18px;
+  margin-bottom:44px;padding-bottom:16px;border-bottom:1px solid var(--line);
+}
+.sec-num{
+  font-family:var(--serif);font-weight:900;
+  font-size:30px;color:var(--gold);
+  line-height:1;
+}
+.sec-title{
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(22px,3vw,30px);letter-spacing:.03em;
+}
+.sec-note{margin-left:auto;font-size:12px;color:var(--muted);letter-spacing:.14em;white-space:nowrap;text-transform:lowercase;}
+
+/* ============ 01 简介 ============ */
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+.intro-lead{
+  font-family:var(--serif);font-weight:600;
+  font-size:clamp(18px,2.2vw,22px);line-height:1.9;
+}
+.intro-lead em{font-style:normal;color:var(--navy);border-bottom:2px solid var(--gold);}
+.intro-body p{color:#4A4E57;margin-bottom:16px;max-width:36em;}
+.intro-facts{border-top:1px solid var(--line);}
+.fact{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line);font-size:14px;}
+.fact dt{flex:0 0 90px;color:var(--muted);letter-spacing:.12em;font-size:12px;padding-top:3px;}
+.fact dd{color:#3A3E47;}
+@media(max-width:720px){.intro-grid{grid-template-columns:1fr;gap:28px;}}
+
+/* ============ 02 活动成果 ============ */
+.works-list{display:flex;flex-direction:column;}
+.work{
+  display:grid;grid-template-columns:340px 1fr;gap:36px;
+  padding:36px 0;border-bottom:1px solid var(--line);
+}
+.work:first-child{padding-top:0;}
+.work-pic{position:relative;overflow:hidden;background:#E4E1D6;}
+.work-pic img{width:100%;height:230px;object-fit:cover;filter:saturate(.9);transition:transform .4s ease;}
+.work:hover .work-pic img{transform:scale(1.025);}
+.work-pic .no{position:absolute;top:0;left:0;background:var(--gold);color:var(--navy-deep);
+  font-family:var(--serif);font-weight:900;font-size:13px;padding:6px 14px;letter-spacing:.1em;}
+.work-meta{display:flex;gap:20px;font-size:13px;color:var(--muted);margin-bottom:12px;letter-spacing:.05em;}
+.work-title{font-family:var(--serif);font-weight:700;font-size:clamp(20px,2.4vw,26px);margin-bottom:12px;}
+.work-desc{color:#4A4E57;font-size:15px;max-width:38em;}
+.work-state{margin-top:16px;font-size:12px;color:var(--gold);letter-spacing:.14em;}
+@media(max-width:720px){
+  .work{grid-template-columns:1fr;gap:18px;padding:28px 0;}
+  .work-pic img{height:200px;}
+}
+
+/* ============ 03 在会名录 ============ */
+.roster-intro{max-width:44em;color:#4A4E57;font-size:15px;margin-bottom:30px;}
+.search{
+  display:flex;align-items:stretch;
+  border:1px solid #C9C4B6;background:#FFFEF9;
+  max-width:620px;transition:border-color .15s;
+}
+.search:focus-within{border-color:var(--gold);}
+.search input{
+  flex:1;border:none;outline:none;background:transparent;
+  font-family:var(--sans);font-size:16px;padding:15px 18px;color:var(--ink);
+}
+.search input::placeholder{color:#9A968C;}
+.search button{
+  border:none;cursor:pointer;
+  background:var(--navy);color:#F3EFE4;
+  font-family:var(--sans);font-size:14px;letter-spacing:.15em;
+  padding:0 28px;transition:background .15s;
+}
+.search button:hover{background:#1B3A5E;}
+.search button:active{background:#0E1D33;}
+.suggest{
+  position:relative;max-width:620px;
+}
+.suggest-list{
+  position:absolute;top:4px;left:0;right:0;z-index:40;
+  background:#FFFEF9;border:1px solid var(--line);border-top:none;
+  box-shadow:0 14px 30px rgba(18,35,61,.10);
+  display:none;max-height:280px;overflow:auto;
+}
+.suggest-list.open{display:block;}
+.suggest-item{
+  display:flex;align-items:center;gap:14px;
+  padding:12px 18px;cursor:pointer;border-bottom:1px solid var(--line);font-size:15px;
+}
+.suggest-item:last-child{border-bottom:none;}
+.suggest-item:hover{background:#F1EEE4;}
+.suggest-item .dept{font-size:12px;color:var(--muted);letter-spacing:.06em;}
+.suggest-item .arrow{margin-left:auto;color:var(--gold);font-size:13px;}
+.search-tip{margin-top:14px;font-size:14px;color:#8A2F2F;min-height:22px;}
+.search-hint{margin-top:10px;font-size:13px;color:var(--muted);}
+.search-hint b{color:#3A3E47;font-weight:500;}
+.roster-foot{margin-top:34px;border-top:1px solid var(--line);padding-top:20px;
+  font-size:13px;color:var(--muted);max-width:620px;}
+
+/* ============ 04 加入 ============ */
+.join-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;}
+.join-copy p{color:#4A4E57;margin-bottom:14px;max-width:34em;}
+.join-card{
+  border:1px solid var(--line);background:#FFFEF9;
+  padding:28px 30px;
+}
+.join-card h4{font-family:var(--serif);font-weight:700;font-size:18px;margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+.join-card h4::before{content:"";width:20px;height:2px;background:var(--gold);}
+.join-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);font-size:14px;}
+.join-row:last-child{border-bottom:none;}
+.join-row .k{color:var(--muted);}
+.join-row .v{font-family:var(--serif);font-weight:600;color:var(--navy);}
+.join-row .v.placeholder{color:#9A968C;font-family:var(--sans);font-weight:400;}
+@media(max-width:720px){.join-grid{grid-template-columns:1fr;gap:32px;}}
+
+/* ============ 页脚 ============ */
+.site-foot{background:var(--navy-deep);color:#B9BEC9;margin-top:96px;}
+.foot-grid{display:grid;grid-template-columns:1.2fr 1fr 1.4fr;gap:48px;padding:64px 0 48px;}
+.foot-grid h4{font-family:var(--serif);font-weight:700;color:#F3EFE4;font-size:16px;margin-bottom:16px;letter-spacing:.06em;}
+.foot-grid p{font-size:13.5px;line-height:1.9;}
+.foot-grid .cn{font-size:13.5px;color:#D9D4C8;}
+.foot-brand{font-family:var(--serif);font-weight:900;font-size:18px;color:#F3EFE4;letter-spacing:.04em;margin-bottom:10px;}
+.foot-legal{border-top:1px solid rgba(243,239,228,.12);padding:22px 0 26px;
+  display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between;
+  font-size:12.5px;color:#8B93A3;letter-spacing:.04em;}
+.foot-legal a{color:#8B93A3;border-bottom:1px solid rgba(139,147,163,.4);}
+.foot-legal a:hover{color:var(--gold-soft);border-bottom-color:var(--gold-soft);}
+@media(max-width:720px){.foot-grid{grid-template-columns:1fr;gap:34px;padding:48px 0 34px;}}
+
+/* ============ hero 入场（一次，克制） ============ */
+@keyframes rise{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
+.hero-copy{animation:rise .7s ease both;}
+.hero-cta{animation:rise .7s .14s ease both;}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .hero-copy,.hero-copy .btn{animation:none;}
+  .work-pic img{transition:none;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="mark">黄石三中文娱俱乐部</span>
+      <span class="sub">HSSZEC</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#works">办过的事</a>
+      <a href="#roster">在会名录</a>
+      <a href="#join">加入我们</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="打开菜单" aria-expanded="false">☰</button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="移动端导航">
+    <a href="#works">办过的事</a>
+    <a href="#roster">在会名录</a>
+    <a href="#join">加入我们</a>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="hero-eyebrow">学生自组社团 · 活动记录与在会名录</p>
+      <h1 class="hero-title">把舞台上的事，<br><span class="accent">记在纸面上。</span></h1>
+      <p class="hero-desc">黄石三中文化和娱乐俱乐部（HSSZEC）的官网。办过的活动、攒下的照片、在会成员的名录，都归置在这里。页面还在长，常回来看看。</p>
+      <div class="hero-cta">
+        <a class="btn solid" href="#works">看看办过的事</a>
+        <a class="btn" href="#roster">查在会成员</a>
+      </div>
+    </div>
+    <div class="hero-side" aria-hidden="true">HSSZEC EST 2025</div>
+  </div>
+  <p class="hero-tag" aria-hidden="true">HUANGSHI NO.3 HIGH SCHOOL</p>
+</section>
+
+<main>
+  <!-- ===== 01 简介 ===== -->
+  <section class="block" id="intro">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">01</span>
+        <h2 class="sec-title">这个俱乐部是什么</h2>
+        <span class="sec-note">INTRODUCTION</span>
+      </div>
+      <div class="intro-grid">
+        <p class="intro-lead">说简单点：<em>把学校里爱舞台、爱艺术、爱音乐的人拢到一起</em>，一年办几场像样的活动，留点往后能翻出来看的东西。</p>
+        <div>
+          <div class="intro-body">
+            <p>我们不只办活动，也负责把活动记下来——照片、幕后花絮，都收在“办过的事”里。新成员进了会，名字和相关信息会收进“在会名录”，一人一页。</p>
+            <p>俱乐部的门一直开着。不需要有才艺才能来，有兴趣就来看看。</p>
+          </div>
+          <dl class="intro-facts">
+            <div class="fact"><dt>全称</dt><dd>黄石三中文件和娱乐俱乐部</dd></div>
+            <div class="fact"><dt>英文</dt><dd>HSSZ Entertainment Club</dd></div>
+            <div class="fact"><dt>纳新</dt><dd>面向全校在读及往届学生，常年可入</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 02 办过的事（活动成果） ===== -->
+  <section class="block" id="works">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">02</span>
+        <h2 class="sec-title">办过的事</h2>
+        <span class="sec-note">ACTIVITY ARCHIVE</span>
+      </div>
+      <!-- 活动列表由下方 ACTIVITY DATA 渲染；新增活动只改数据，不动结构 -->
+      <div class="works-list" id="worksList"></div>
+      <! -- == 后期新增活动：在页面底部ACTIVITY DATA的数组里加一条即可，会自动排进上方列表。== -- >
+    </div>
+  </section>
+
+  <!-- ===== 03 在会名录 ===== -->
+  <section class="block" id="roster">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">03</span>
+        <h2 class="sec-title">在会名录</h2>
+        <span class="sec-note">MEMBER DIRECTORY</span>
+      </div>
+      <p class="roster-intro">输入成员QQ号，直接跳到Ta的那页。输入时下面会列出匹配的号码，点一下就行。名录在陆续建档，还没建档的请稍等哦。</p>
+
+      <div class="suggest">
+        <div class="search">
+          <input type="text" id="memberInput" placeholder="输入QQ号，比如：1784756175" autocomplete="off" aria-label="成员QQ号">
+          <button id="searchBtn" type="button">查找</button>
+        </div>
+        <div class="suggest-list" id="suggestList" role="listbox"></div>
+      </div>
+      <p class="search-tip" id="searchTip" role="status"></p>
+      <! -- == <p class="search-hint">成员页面命名规则：<b>member-姓名.html</b>，与首页放在同一文件夹；新成员建档后，把他的页面放进文件夹，名录里就会多一个可查的人。</p> == -- >
+    </div>
+  </section>
+
+  <!-- ===== 04 加入我们 ===== -->
+  <section class="block" id="join">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">04</span>
+        <h2 class="sec-title">加入我们</h2>
+        <span class="sec-note">JOIN US</span>
+      </div>
+      <div class="join-grid">
+        <div class="join-copy">
+          <p>想进会，不需要有什么作品、荣誉和要求。带着兴趣来，这就是最好的资格。</p>
+          <p>入会流程就两步：①进入俱乐部QQ群；②等待建档。这样“在会名录”里，也有你的一页了。</p>
+        </div>
+        <div class="join-card">
+          <h4>入会信息</h4>
+          <div class="join-row"><span class="k">QQ 交流群</span><span class="v placeholder">1065235382</span></div>
+          <div class="join-row"><span class="k">纳新时间</span><span class="v">常年开放</span></div>
+          <div class="join-row"><span class="k">入会费用</span><span class="v">无</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p class="foot-brand">黄石三中文化和娱乐俱乐部</p>
+        <p class="cn">HSSZEC · 黄石三中学学生自建社团。<br>办活动，也记活动；收成员，也收Ta们的作品。</p>
+      </div>
+      <div>
+        <h4>联系与入会</h4>
+        <p class="cn">QQ 交流群：<b style="color:#E4C27A">1065235382</b><br>联系人：Yuwan于晚./（1784756175）</p>
+      </div>
+      <div>
+        <h4>关于本站内容</h4>
+        <p>本站展示的成员姓名、照片、影像与个人作品，均经成员本人知情并同意，授权黄石三中文化和娱乐俱乐部在官网、社团宣传与校内活动中使用。成员如需更新或撤回相关内容，可联系俱乐部处理。</p>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <span>© 2026 黄石三中文娱俱乐部（HSSZEC）· 保留所有权利</span>
+      <span><a href="#top">回到顶部</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* =========================================================
+   ACTIVITY DATA —— 活动成果数据
+   后期新增活动：往数组里加一条对象即可，字段如下：
+   { title, date, place, desc, img, tag }
+   img 填图片链接；tag 是状态角标，如 "已归档" / "进行中"
+   ========================================================= */
+const ACTIVITIES = [
+  {
+    title:"校园乐队演出专场",
+    date:"2025年5月",
+    place:"学校礼堂",
+    desc:"吉他、鼓点、话筒前的紧张和尽兴。第一次自己张罗一整场演出，音响是借来的，气氛是真的。",
+    img:"https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/XJVlbJOhqomVYRxowb3cYJ2vnne",
+    tag:"已归档"
+  },
+  {
+    title:"文艺汇演 · 舞蹈专场",
+    date:"2025年9月",
+    place:"学校礼堂",
+    desc:"从排练到登台一共六周，台上那三分钟比谁都清楚。谢幕的时候，台下比台上还吵。",
+    img:"https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/C9zjbR3FkoHnqyx1ooTcycxjnjd",
+    tag:"已归档"
+  },
+  {
+    title:"迎新合唱专场",
+    date:"2025年10月",
+    place:"学校礼堂",
+    desc:"新同学入校后的第一场合唱。人齐了，调也齐了，把嗓子交给秋天的晚上。",
+    img:"https://media.doubao.com/space/api/box/stream/download/all_by_mount_point/HdjibCtgGoOHSMx5Ws9cqkEKndh",
+    tag:"已归档"
+  }
+];
+
+/* =========================================================
+   MEMBER DATA —— 在会名录（示例）
+   建档规则：每个成员一个页面文件，命名 member-姓名.html，
+   放在与 index.html 同一文件夹。名单会随建档陆续补齐。
+   ========================================================= */
+const MEMBERS = [
+  { name:"林一舟", dept:"活动部" },
+  { name:"陈晓棠", dept:"演出部" },
+  { name:"周子昂", dept:"宣传部" },
+  { name:"吴雨桐", dept:"后勤部" }
+];
+
+/* ---- 渲染活动列表 ---- */
+(function renderWorks(){
+  const box = document.getElementById("worksList");
+  const rows = ACTIVITIES.map((a, i) => {
+    const no = String(i + 1).padStart(2, "0");
+    return `
+    <article class="work">
+      <div class="work-pic">
+        <img src="${a.img}" alt="${a.title}现场照片" loading="lazy">
+        <span class="no">NO.${no}</span>
+      </div>
+      <div class="work-text">
+        <div class="work-meta">
+          <span>${a.date}</span><span>${a.place}</span>
+        </div>
+        <h3 class="work-title">${a.title}</h3>
+        <p class="work-desc">${a.desc}</p>
+        <p class="work-state">${a.tag}</p>
+      </div>
+    </article>`;
+  }).join("");
+  box.innerHTML = rows;
+})();
+
+/* ---- 成员搜索：联想 + 跳转 ---- */
+const input = document.getElementById("memberInput");
+const btn = document.getElementById("searchBtn");
+const tip = document.getElementById("searchTip");
+const list = document.getElementById("suggestList");
+
+function clean(s){ return s.replace(/\s+/g, ""); }
+
+function showTip(msg, bad){
+  tip.textContent = msg || "";
+  tip.style.color = bad ? "#8A2F2F" : "#6F7480";
+}
+
+function renderSuggest(q){
+  if(!q){ list.classList.remove("open"); return; }
+  const hits = MEMBERS.filter(m => m.name.includes(q) || m.dept.includes(q));
+  if(!hits.length){ list.classList.remove("open"); return; }
+  list.innerHTML = hits.map(m => `
+    <div class="suggest-item" data-name="${m.name}">
+      <span>${m.name}</span>
+      <span class="dept">${m.dept}</span>
+      <span class="arrow">›</span>
+    </div>`).join("");
+  list.classList.add("open");
+}
+
+function goMember(name){
+  const safe = encodeURIComponent(name);
+  window.location.href = "member-" + safe + ".html";
+}
+
+input.addEventListener("input", () => {
+  const q = clean(input.value);
+  renderSuggest(q);
+  if(q) showTip("", false);
+});
+
+list.addEventListener("click", e => {
+  const item = e.target.closest(".suggest-item");
+  if(!item) return;
+  const name = item.dataset.name;
+  input.value = name;
+  list.classList.remove("open");
+  goMember(name);
+});
+
+document.addEventListener("click", e => {
+  if(!e.target.closest(".suggest")) list.classList.remove("open");
+});
+
+function search(){
+  const q = clean(input.value);
+  if(!q){
+    showTip("先输入一个姓名再查找。", true);
+    list.classList.remove("open");
+    return;
+  }
+  const hit = MEMBERS.find(m => m.name === q);
+  if(!hit){
+    list.classList.remove("open");
+    showTip("名录里还没有这个名字，可能还没建档。确认后可直接访问 member-姓名.html。", true);
+    return;
+  }
+  showTip("", false);
+  goMember(q);
+}
+
+btn.addEventListener("click", search);
+input.addEventListener("keydown", e => {
+  if(e.key === "Enter"){ e.preventDefault(); search(); }
+  if(e.key === "Escape") list.classList.remove("open");
+});
+
+/* ---- 移动端菜单 ---- */
+const menuBtn = document.getElementById("menuBtn");
+const mobileNav = document.getElementById("mobileNav");
+menuBtn.addEventListener("click", () => {
+  const open = mobileNav.style.display === "block";
+  mobileNav.style.display = open ? "none" : "block";
+  menuBtn.setAttribute("aria-expanded", String(!open));
+});
+</script>
+</body>
+</html>
