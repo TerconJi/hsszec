@@ -294,7 +294,7 @@ section{scroll-margin-top:84px;}
   <div class="hero-inner">
     <div class="hero-copy">
       <p class="hero-eyebrow">学生自组社团 · 活动记录与在会名录</p>
-      <h1 class="hero-title">把舞台上的事，<br><span class="accent">记在纸面上。</span></h1>
+      <h1 class="hero-title">因艺术而生，<br>为艺术不止<span class="accent">。</span></h1>
       <p class="hero-desc">黄石三中文化和娱乐俱乐部（HSSZEC）的官网。办过的活动、攒下的照片、在会成员的名录，都归置在这里。页面还在长，常回来看看。</p>
       <div class="hero-cta">
         <a class="btn solid" href="#works">看看办过的事</a>
@@ -303,7 +303,7 @@ section{scroll-margin-top:84px;}
     </div>
     <div class="hero-side" aria-hidden="true">HSSZEC EST 2025</div>
   </div>
-  <p class="hero-tag" aria-hidden="true">HUANGSHI NO.3 HIGH SCHOOL</p>
+  <p class="hero-tag" aria-hidden="true">HSSZ Entertainment Club</p>
 </section>
 
 <main>
@@ -364,7 +364,7 @@ section{scroll-margin-top:84px;}
         <div class="suggest-list" id="suggestList" role="listbox"></div>
       </div>
       <p class="search-tip" id="searchTip" role="status"></p>
-      <! -- == <p class="search-hint">成员页面命名规则：<b>member-姓名.html</b>，与首页放在同一文件夹；新成员建档后，把他的页面放进文件夹，名录里就会多一个可查的人。</p> == -- >
+      <!-- == 成员页面命名规则：member-姓名.html，与首页放在同一文件夹；新成员建档后，把他的页面放进文件夹，名录里就会多一个可查的人。</p> == -- >
     </div>
   </section>
 
@@ -455,7 +455,7 @@ const ACTIVITIES = [
    放在与 index.html 同一文件夹。名单会随建档陆续补齐。
    ========================================================= */
 const MEMBERS = [
-  { name:"林一舟", dept:"活动部" },
+  { name:"Yuwan于晚./", dept:"2025112901" },
   { name:"陈晓棠", dept:"演出部" },
   { name:"周子昂", dept:"宣传部" },
   { name:"吴雨桐", dept:"后勤部" }
@@ -538,14 +538,14 @@ document.addEventListener("click", e => {
 function search(){
   const q = clean(input.value);
   if(!q){
-    showTip("先输入一个姓名再查找。", true);
+    showTip("先输入一个QQ号再查找。", true);
     list.classList.remove("open");
     return;
   }
   const hit = MEMBERS.find(m => m.name === q);
   if(!hit){
     list.classList.remove("open");
-    showTip("名录里还没有这个名字，可能还没建档。确认后可直接访问 member-姓名.html。", true);
+    showTip("名录里还没有这条信息，可能还没建档。确认后可直接访问 member-QQ号.html。", true);
     return;
   }
   showTip("", false);
